@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Pape Yoro Ndiaye</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+    <nav>
+        <a href="../index.html" class="nav-logo">PY<span>N</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section id="contact" style="padding-top:120px">
+        <div class="section-inner">
+            <p class="section-label">Travaillons ensemble</p>
+            <h1 class="section-title">Me contacter</h1>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Discutons de ton projet</h3>
+                    <p>Tu as un projet en tête, une question, ou tu veux juste échanger sur la tech ? N'hésite pas à me
+                        contacter. Je réponds généralement sous 24h.</p>
+                    <div class="contact-socials">
+                        <a href="https://github.com/k6ybpsv66y-alt" target="_blank" class="social-link">
+                            <span class="social-link-icon">🐙</span>
+                            <div>
+                                <div
+                                    style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em">
+                                    GitHub</div>
+                                <div style="color:var(--text-primary);font-weight:600">k6ybpsv66y-alt</div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pape-yoro-ndiaye-719438337" target="_blank"
+                            class="social-link">
+                            <span class="social-link-icon">💼</span>
+                            <div>
+                                <div
+                                    style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em">
+                                    LinkedIn</div>
+                                <div style="color:var(--text-primary);font-weight:600">Pape Yoro Ndiaye</div>
+                            </div>
+                        </a>
+                        <a href="mailto:papeyorondiaye15@icloud.com" class="social-link">
+                            <span class="social-link-icon">📧</span>
+                            <div>
+                                <div
+                                    style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em">
+                                    Email</div>
+                                <div style="color:var(--text-primary);font-weight:600">papeyorondiaye15@icloud.com</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="form-wrap">
+                        <div class="form-title">✉️ Envoyer un message</div>
+                        <div class="form-group">
+                            <label for="contact-name">Nom complet</label>
+                            <input type="text" id="contact-name" placeholder="Ton nom" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" placeholder="ton@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Sujet</label>
+                            <input type="text" id="contact-subject" placeholder="De quoi s'agit-il ?" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5" placeholder="Ton message ici..."
+                                required></textarea>
+                        </div>
+                        <button class="btn-submit" onclick="submitContact()">Envoyer le message →</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:60px">
+                <p class="section-label">Collaboration</p>
+                <h2 class="section-title">Soumettre un projet</h2>
+                <div class="form-wrap" style="max-width:800px">
+                    <div class="form-title">🚀 Demande de projet</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                        <div class="form-group">
+                            <label for="proj-name">Votre nom</label>
+                            <input type="text" id="proj-name" placeholder="Votre nom" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="proj-email">Email</label>
+                            <input type="email" id="proj-email" placeholder="votre@email.com" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-type">Type de projet</label>
+                        <select id="proj-type">
+                            <option value="">-- Choisir un type --</option>
+                            <option>Site web / Portfolio</option>
+                            <option>Application web</option>
+                            <option>Base de données</option>
+                            <option>Système embarqué / IoT</option>
+                            <option>Script / Automatisation Python</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-budget">Budget estimé</label>
+                        <select id="proj-budget">
+                            <option value="">-- Sélectionner --</option>
+                            <option>Moins de 50 000 FCFA</option>
+                            <option>50 000 – 150 000 FCFA</option>
+                            <option>150 000 – 500 000 FCFA</option>
+                            <option>Plus de 500 000 FCFA</option>
+                            <option>À discuter</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-desc">Description du projet</label>
+                        <textarea id="proj-desc" rows="6" placeholder="Décrivez votre projet en détail..."
+                            required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="proj-deadline">Délai souhaité</label>
+                        <input type="date" id="proj-deadline" />
+                    </div>
+                    <button class="btn-submit" onclick="submitProject()">Soumettre la demande →</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">PYN</div>
+            <span class="footer-copy">© 2026 Pape Yoro Ndiaye</span>
+            <div class="footer-links">
+                <a href="https://github.com/k6ybpsv66y-alt" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/pape-yoro-ndiaye-719438337" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+        function submitContact() {
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const msg = document.getElementById('contact-message').value.trim();
+            if (!name || !email || !msg) {
+                alert('Merci de remplir tous les champs obligatoires.');
+                return;
+            }
+            alert('Message envoyé ! Merci ' + name + ', je vous répondrai bientôt.');
+        }
+
+        function submitProject() {
+            const name = document.getElementById('proj-name').value.trim();
+            const email = document.getElementById('proj-email').value.trim();
+            const desc = document.getElementById('proj-desc').value.trim();
+            if (!name || !email || !desc) {
+                alert('Merci de remplir tous les champs obligatoires.');
+                return;
+            }
+            alert('Demande soumise ! Merci ' + name + ', je vous contacterai pour discuter de votre projet.');
+        }
+    </script>
+</body>
+
+</html>

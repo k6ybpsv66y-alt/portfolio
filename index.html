@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pape Yoro Ndiaye — Développeur</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">PY<span>N</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="pages/projets.html">Projets</a></li>
+            <li><a href="pages/about.html">À propos</a></li>
+            <li><a href="pages/contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-tag fade-up fade-up-1">Disponible pour des projets</div>
+                <h1 class="hero-title fade-up fade-up-2">
+                    Pape Yoro<br>
+                    <span class="line-accent">Ndiaye</span>
+                </h1>
+                <p class="hero-subtitle fade-up fade-up-3">
+                    Étudiant en Licence 2 à l'École Supérieure de Technologie et de Management.
+                    Je conçois des interfaces web soignées et des systèmes embarqués innovants.
+                </p>
+                <div class="hero-btns fade-up fade-up-4">
+                    <a href="pages/projets.html" class="btn-primary">Voir mes projets →</a>
+                    <a href="pages/contact.html" class="btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-up fade-up-2">
+                <div class="hero-img-wrap">
+                    <img src="images/profile.jpeg" alt="Pape Yoro Ndiaye" />
+                    <div class="hero-img-badge">
+                        <span class="badge-val">3+</span>
+                        Projets réalisés
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Projets réalisés</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Langages maîtrisés</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">2</span>
+                <span class="stat-label">Années d'apprentissage</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">L2</span>
+                <span class="stat-label">Niveau d'études</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="competences">
+        <div class="section-inner">
+            <p class="section-label">Compétences</p>
+            <h2 class="section-title">Mes technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-icon">🌐</span>
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-level">Maîtrisé</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🎨</span>
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-level">Maîtrisé</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🐍</span>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level">Intermédiaire</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">☕</span>
+                    <div class="skill-name">Java</div>
+                    <div class="skill-level">En cours</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:40%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🗄️</span>
+                    <div class="skill-name">SQL / MySQL</div>
+                    <div class="skill-level">Intermédiaire</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:65%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔌</span>
+                    <div class="skill-name">ESP32 / Embarqué</div>
+                    <div class="skill-level">Notions</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:50%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <div class="section-inner">
+            <p class="section-label">Réalisations</p>
+            <h2 class="section-title">Mes projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <span class="project-thumb-icon">📒</span>
+                        <div class="project-thumb-overlay"></div>
+                        <span class="project-tag">Web / Python</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-num">01 / 03</div>
+                        <h3 class="project-title">Répertoire Téléphonique</h3>
+                        <p class="project-desc">Application permettant de gérer une liste de contacts avec ajout,
+                            modification, suppression et recherche.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                        </div>
+                        <a href="pages/projets.html#projet1" class="project-link">Voir plus →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <span class="project-thumb-icon">✈️</span>
+                        <div class="project-thumb-overlay"></div>
+                        <span class="project-tag">Base de données</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-num">02 / 03</div>
+                        <h3 class="project-title">BD Air Sénégal</h3>
+                        <p class="project-desc">Conception et manipulation d'une base de données relationnelle pour la
+                            compagnie Air Sénégal via MySQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Merise</span>
+                        </div>
+                        <a href="pages/projets.html#projet2" class="project-link">Voir plus →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <span class="project-thumb-icon">🗑️</span>
+                        <div class="project-thumb-overlay"></div>
+                        <span class="project-tag">Embarqué / IoT</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-num">03 / 03</div>
+                        <h3 class="project-title">Poubelle Intelligente ESP32</h3>
+                        <p class="project-desc">Système embarqué utilisant un ESP32 pour automatiser l'ouverture d'une
+                            poubelle via capteur de proximité.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">ESP32</span>
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">Arduino</span>
+                        </div>
+                        <a href="pages/projets.html#projet3" class="project-link">Voir plus →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="recherche">
+        <div class="search-inner">
+            <p class="section-label" style="justify-content:center">Recherche</p>
+            <h2 class="section-title" style="margin-bottom:0">Trouver un projet</h2>
+            <p style="color:var(--text-secondary);margin-top:12px;font-size:0.95rem">Recherchez par mot-clé parmi tous
+                mes projets</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Ex: Python, SQL, ESP32..." />
+                <button onclick="searchProjects()">Rechercher</button>
+            </div>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">PYN</div>
+            <span class="footer-copy">© 2026 Pape Yoro Ndiaye — Tous droits réservés</span>
+            <div class="footer-links">
+                <a href="https://github.com/k6ybpsv66y-alt" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/pape-yoro-ndiaye-719438337" target="_blank">LinkedIn</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+        const projects = [
+            { title: 'Répertoire Téléphonique', tags: ['python', 'html', 'css', 'contact'], url: 'pages/projets.html#projet1' },
+            { title: 'BD Air Sénégal', tags: ['mysql', 'sql', 'base de données', 'merise'], url: 'pages/projets.html#projet2' },
+            { title: 'Poubelle Intelligente ESP32', tags: ['esp32', 'arduino', 'iot', 'capteur'], url: 'pages/projets.html#projet3' },
+        ];
+
+        function searchProjects() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const container = document.getElementById('search-results');
+            if (!q) { container.innerHTML = ''; return; }
+            const results = projects.filter(p =>
+                p.title.toLowerCase().includes(q) || p.tags.some(t => t.includes(q))
+            );
+            if (results.length === 0) {
+                container.innerHTML = '<p style="color:var(--text-muted);font-size:0.88rem;margin-top:8px">Aucun projet trouvé.</p>';
+            } else {
+                container.innerHTML = results.map(r =>
+                    `<div class="search-result-item" onclick="location.href='${r.url}'">
+          <strong style="color:var(--text-primary)">${r.title}</strong>
+          <span style="margin-left:8px;font-size:0.75rem;color:var(--text-muted)">${r.tags.join(', ')}</span>
+        </div>`
+                ).join('');
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('keydown', e => {
+            if (e.key === 'Enter') searchProjects();
+        });
+    </script>
+</body>
+
+</html>

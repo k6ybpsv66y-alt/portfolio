@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets — Pape Yoro Ndiaye</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        .project-detail {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: border-color 0.3s;
+        }
+
+        .project-detail:hover {
+            border-color: var(--border-accent);
+        }
+
+        .project-detail:target {
+            border-color: var(--accent);
+        }
+
+        .project-detail-header {
+            padding: 48px 48px 32px;
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .project-detail-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-dim);
+            border: 1px solid var(--border-accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .project-detail-num {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .project-detail-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .project-detail-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-detail-body {
+            padding: 40px 48px;
+        }
+
+        .detail-section {
+            margin-bottom: 36px;
+        }
+
+        .detail-section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-section-title::before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .detail-features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 10px;
+        }
+
+        .detail-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .detail-features li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .detail-challenges {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .detail-challenges p {
+            margin: 0;
+        }
+
+        .project-detail-footer {
+            padding: 24px 48px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            background: var(--bg-secondary);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        @media (max-width: 700px) {
+            .project-detail-header {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 28px 24px 20px;
+            }
+
+            .project-detail-body {
+                padding: 28px 24px;
+            }
+
+            .project-detail-footer {
+                padding: 20px 24px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .detail-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../index.html" class="nav-logo">PY<span>N</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section style="padding-top:120px">
+        <div class="section-inner">
+            <p class="section-label">Portfolio</p>
+            <h1 class="section-title">Mes projets</h1>
+
+            <!-- PROJET 1 -->
+            <div class="project-detail" id="projet1">
+                <div class="project-detail-header">
+                    <div class="project-detail-icon">📒</div>
+                    <div class="project-detail-meta">
+                        <div class="project-detail-num">PROJET 01 / 03 — WEB / PYTHON</div>
+                        <h2 class="project-detail-title">Répertoire Téléphonique</h2>
+                        <div class="project-detail-tags">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-body">
+                    <div class="detail-section">
+                        <div class="detail-section-title">Présentation du projet</div>
+                        <p>Le Répertoire Téléphonique est une application de gestion de contacts développée dans le
+                            cadre du cours de programmation Python. L'objectif principal était de concevoir un outil
+                            simple, fonctionnel et intuitif permettant à tout utilisateur de centraliser et organiser
+                            ses informations de contact en un seul endroit.</p>
+                        <p>Ce projet m'a permis d'explorer les fondamentaux de la programmation Python, notamment la
+                            manipulation de structures de données, la lecture/écriture de fichiers, ainsi que la logique
+                            métier derrière une application CRUD (Create, Read, Update, Delete). Au-delà du code, ce
+                            projet représente ma première approche concrète d'un problème réel résolu par
+                            l'informatique.</p>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Fonctionnalités développées</div>
+                        <ul class="detail-features">
+                            <li>Ajout d'un nouveau contact avec nom, prénom et numéro</li>
+                            <li>Affichage complet de la liste des contacts</li>
+                            <li>Modification d'un contact existant</li>
+                            <li>Suppression définitive d'un contact</li>
+                            <li>Recherche rapide par nom ou numéro</li>
+                            <li>Persistance des données entre les sessions</li>
+                            <li>Validation des entrées utilisateur</li>
+                            <li>Interface en ligne de commande claire et lisible</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Apprentissages clés</div>
+                        <p>Ce projet a été une étape cruciale dans mon apprentissage. J'ai appris à structurer un
+                            programme Python en fonctions réutilisables, à gérer les erreurs avec des blocs try/except,
+                            et à manipuler des fichiers pour assurer la persistance des données.</p>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Défis rencontrés</div>
+                        <div class="detail-challenges">
+                            <p>Le principal défi a été la gestion de la persistance des données sans base de données
+                                formelle. J'ai dû concevoir un système de lecture/écriture en fichier qui reste cohérent
+                                même en cas d'interruption du programme.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-footer">
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python 3</span>
+                        <span class="tech-badge">Fichiers .json</span>
+                        <span class="tech-badge">Programmation fonctionnelle</span>
+                    </div>
+                    <a href="../index.html#projets" class="project-link">← Retour aux projets</a>
+                </div>
+            </div>
+
+            <!-- PROJET 2 -->
+            <div class="project-detail" id="projet2">
+                <div class="project-detail-header">
+                    <div class="project-detail-icon">✈️</div>
+                    <div class="project-detail-meta">
+                        <div class="project-detail-num">PROJET 02 / 03 — BASE DE DONNÉES</div>
+                        <h2 class="project-detail-title">BD Air Sénégal</h2>
+                        <div class="project-detail-tags">
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Merise</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-body">
+                    <div class="detail-section">
+                        <div class="detail-section-title">Présentation du projet</div>
+                        <p>La BD Air Sénégal est un projet de base de données relationnelle développé dans le cadre du
+                            cours de systèmes de bases de données. Il simule le système d'information d'une compagnie
+                            aérienne, en modélisant les entités fondamentales : les vols, les avions, les passagers, les
+                            réservations et les aéroports.</p>
+                        <p>Ce projet couvre l'ensemble du cycle de vie d'un projet de base de données : de la conception
+                            du modèle conceptuel (MCD/Merise), à la création physique des tables sous MySQL, jusqu'à
+                            l'écriture de requêtes SQL complexes pour interroger et manipuler les données.</p>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Fonctionnalités développées</div>
+                        <ul class="detail-features">
+                            <li>Modélisation conceptuelle avec la méthode Merise (MCD)</li>
+                            <li>Création du schéma relationnel normalisé (3NF)</li>
+                            <li>Gestion des vols (départ, arrivée, horaires)</li>
+                            <li>Gestion des passagers et de leurs réservations</li>
+                            <li>Gestion des avions et de leur capacité</li>
+                            <li>Requêtes SELECT avec JOIN, GROUP BY, HAVING</li>
+                            <li>Insertion, mise à jour et suppression de données</li>
+                            <li>Gestion des contraintes d'intégrité référentielle</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Apprentissages clés</div>
+                        <p>Ce projet m'a profondément ancré dans la logique relationnelle. J'ai compris pourquoi la
+                            normalisation est cruciale pour éviter la redondance des données, et comment les clés
+                            étrangères assurent la cohérence entre les tables.</p>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Défis rencontrés</div>
+                        <div class="detail-challenges">
+                            <p>La difficulté principale résidait dans la modélisation des relations entre les entités :
+                                un passager peut avoir plusieurs réservations, une réservation concerne un seul vol,
+                                mais un vol peut transporter des centaines de passagers. Gérer ces cardinalités
+                                correctement dans le MCD a nécessité plusieurs itérations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-footer">
+                    <div class="tech-stack">
+                        <span class="tech-badge">MySQL 8</span>
+                        <span class="tech-badge">SQL DDL/DML</span>
+                        <span class="tech-badge">Merise / MCD</span>
+                    </div>
+                    <a href="../index.html#projets" class="project-link">← Retour aux projets</a>
+                </div>
+            </div>
+
+            <!-- PROJET 3 -->
+            <div class="project-detail" id="projet3">
+                <div class="project-detail-header">
+                    <div class="project-detail-icon">🗑️</div>
+                    <div class="project-detail-meta">
+                        <div class="project-detail-num">PROJET 03 / 03 — EMBARQUÉ / IoT</div>
+                        <h2 class="project-detail-title">Poubelle Intelligente via ESP32</h2>
+                        <div class="project-detail-tags">
+                            <span class="tech-badge">ESP32</span>
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">IoT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-body">
+                    <div class="detail-section">
+                        <div class="detail-section-title">Présentation du projet</div>
+                        <p>La Poubelle Intelligente est un projet de système embarqué réalisé avec un microcontrôleur
+                            ESP32. L'idée est simple mais concrète : concevoir une poubelle qui s'ouvre automatiquement
+                            lorsqu'une main ou un objet s'en approche, sans contact physique.</p>
+                        <p>Ce projet démontre une maîtrise réelle des systèmes embarqués : câblage électronique,
+                            programmation temps réel, gestion des capteurs et des actionneurs. C'est l'un des projets
+                            qui m'a le plus passionné car il combine la matière physique et le code de manière très
+                            tangible.</p>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Fonctionnalités développées</div>
+                        <ul class="detail-features">
+                            <li>Détection de proximité via capteur ultrasonique HC-SR04</li>
+                            <li>Commande d'un servomoteur pour l'ouverture du couvercle</li>
+                            <li>Fermeture automatique après délai configurable</li>
+                            <li>Gestion des états (ouvert / fermé / en attente)</li>
+                            <li>Programmation temps réel sur ESP32</li>
+                            <li>Optimisation de la consommation électrique</li>
+                            <li>Câblage électronique complet sur breadboard</li>
+                            <li>Tests et calibration du capteur de distance</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Apprentissages clés</div>
+                        <p>Ce projet m'a initié au monde fascinant des systèmes embarqués. J'ai appris à lire les
+                            datasheets des composants électroniques, à comprendre les signaux PWM pour contrôler un
+                            servomoteur, et à programmer en C++ sur la plateforme Arduino IDE pour l'ESP32.</p>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-section-title">Défis rencontrés</div>
+                        <div class="detail-challenges">
+                            <p>La calibration du capteur ultrasonique a été le défi principal. Les valeurs brutes
+                                étaient instables et causaient des ouvertures intempestives. J'ai dû implémenter un
+                                algorithme de filtrage par moyenne glissante pour lisser les lectures et rendre le
+                                comportement stable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-detail-footer">
+                    <div class="tech-stack">
+                        <span class="tech-badge">ESP32</span>
+                        <span class="tech-badge">C++ / Arduino</span>
+                        <span class="tech-badge">HC-SR04</span>
+                        <span class="tech-badge">Servomoteur SG90</span>
+                    </div>
+                    <a href="../index.html#projets" class="project-link">← Retour aux projets</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">PYN</div>
+            <span class="footer-copy">© 2026 Pape Yoro Ndiaye</span>
+            <div class="footer-links">
+                <a href="https://github.com/k6ybpsv66y-alt" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/pape-yoro-ndiaye-719438337" target="_blank">LinkedIn</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    </script>
+</body>
+
+</html>

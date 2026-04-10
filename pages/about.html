@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos — Pape Yoro Ndiaye</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+    <nav>
+        <a href="../index.html" class="nav-logo">PY<span>N</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section style="padding-top:120px">
+        <div class="section-inner">
+            <p class="section-label">Qui suis-je ?</p>
+            <h1 class="section-title">À propos de moi</h1>
+
+            <div class="about-grid">
+                <div class="about-img-wrap">
+                    <div class="about-img-frame">
+                        <img src="../images/profile.jpeg" alt="Pape Yoro Ndiaye" />
+                    </div>
+                    <div class="about-deco"></div>
+                </div>
+                <div class="about-text">
+                    <p>Je m'appelle <strong style="color:var(--text-primary)">Pape Yoro Ndiaye</strong>, étudiant en
+                        Licence 2 à l'École Supérieure de Technologie et de Management. Depuis mes premiers cours
+                        d'informatique, j'ai compris que le développement n'était pas qu'une discipline technique —
+                        c'est une façon de créer, de résoudre des problèmes réels, et de laisser une trace durable dans
+                        un monde de plus en plus numérique.</p>
+                    <p>Ma curiosité m'a naturellement conduit vers plusieurs domaines : le développement web avec HTML
+                        et CSS, la programmation avec Python, la conception de bases de données relationnelles, et les
+                        systèmes embarqués avec l'ESP32. Cette polyvalence me permet de comprendre les projets dans leur
+                        globalité.</p>
+                    <p>Aujourd'hui, je cherche à consolider mes bases, à travailler sur des projets de plus en plus
+                        ambitieux, et à construire un profil qui reflète à la fois ma rigueur technique et ma
+                        créativité.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎓</span>
+                            <div>
+                                <div class="highlight-label">Formation</div>
+                                <div class="highlight-val">Licence 2 — ESTM</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📍</span>
+                            <div>
+                                <div class="highlight-label">Localisation</div>
+                                <div class="highlight-val">Dakar, Sénégal</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💼</span>
+                            <div>
+                                <div class="highlight-label">Statut</div>
+                                <div class="highlight-val">Disponible pour stages</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🚀</span>
+                            <div>
+                                <div class="highlight-label">Objectif</div>
+                                <div class="highlight-val">Développeur Full-Stack</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="max-width:700px;margin-top:80px">
+                <p class="section-label">Parcours</p>
+                <h2 class="section-title" style="margin-bottom:20px">Ma progression</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-text">Début de l'apprentissage du développement web — premiers pas en HTML
+                            et CSS, création de mes premières pages statiques.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-text">Découverte de Python et des bases de données. Premiers projets
+                            concrets : répertoire téléphonique, manipulation de fichiers, requêtes SQL.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 — 2025</div>
+                        <div class="timeline-text">Entrée dans le monde des systèmes embarqués avec l'ESP32. Réalisation
+                            de la poubelle intelligente, premier projet IoT fonctionnel.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 — 2026</div>
+                        <div class="timeline-text">Consolidation des compétences en base de données, modélisation
+                            Merise, et apprentissage de Java. Construction de ce portfolio.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">PYN</div>
+            <span class="footer-copy">© 2026 Pape Yoro Ndiaye</span>
+            <div class="footer-links">
+                <a href="https://github.com/k6ybpsv66y-alt" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/pape-yoro-ndiaye-719438337" target="_blank">LinkedIn</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    </script>
+</body>
+
+</html>
